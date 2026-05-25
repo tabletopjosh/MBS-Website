@@ -19,7 +19,7 @@ export default function TermsConditions() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-4xl font-black text-slate-900 border-b-4 border-mbs-yellow pb-4 mb-12 uppercase italic"
+          className="text-4xl font-black text-slate-900 border-b-4 border-mbs-yellow pb-4 mb-12 uppercase"
         >
           Terms & Conditions
         </motion.h1>

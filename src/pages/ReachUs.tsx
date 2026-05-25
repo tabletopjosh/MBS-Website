@@ -9,18 +9,18 @@ import { motion } from 'motion/react';
 export default function ReachUs() {
   return (
     <div className="bg-white min-h-screen">
-      <section className="bg-mbs-blue text-white py-16">
+      <section className="bg-mbs-blue text-white py-16 md:max-lg:pt-10 md:max-lg:pb-4">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
         >
-          <h1 className="text-5xl font-black uppercase italic tracking-wider">Reach Us</h1>
+          <h1 className="text-5xl font-black uppercase tracking-wider">Reach Us</h1>
           <p className="mt-4 text-blue-100 font-light text-lg">We are here to assist you with your insurance and financial needs.</p>
         </motion.div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 md:max-lg:pt-6 md:max-lg:pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
             {/* Left Column: Location & Hours */}
@@ -38,7 +38,7 @@ export default function ReachUs() {
                 </div>
                 <MapPin className="w-8 h-8 text-mbs-yellow shrink-0 mt-1" />
                 <div>
-                  <h2 className="text-2xl font-black text-white uppercase italic tracking-wide mb-3">Our Location</h2>
+                  <h2 className="text-2xl font-black text-white uppercase tracking-wide mb-3">Our Location</h2>
                   <p className="text-slate-300 leading-relaxed text-lg">
                     865 Mountbatten Road<br />
                     #06-24 Katong Shopping Centre<br />
@@ -56,7 +56,7 @@ export default function ReachUs() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="p-8 rounded-3xl bg-white border-2 border-mbs-grey shadow-sm flex-grow flex flex-col justify-center"
               >
-                <h3 className="text-2xl font-black flex items-center gap-3 text-mbs-blue uppercase italic tracking-wide mb-6">
+                <h3 className="text-2xl font-black flex items-center gap-3 text-mbs-blue uppercase tracking-wide mb-6">
                   <Clock className="w-6 h-6 text-mbs-yellow" /> Operating Hours
                 </h3>
                 <div className="space-y-4 text-slate-600">

@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] sm:min-h-[80vh] pt-6 sm:pt-20 pb-6 sm:pb-20 flex items-center overflow-hidden bg-slate-50">
+      <section className="relative min-h-[60vh] sm:min-h-[80vh] md:max-lg:min-h-0 lg:min-h-[80vh] pt-6 sm:pt-20 md:max-lg:pt-10 lg:pt-20 pb-6 sm:pb-20 md:max-lg:pb-8 lg:pb-20 flex items-center overflow-hidden bg-slate-50">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             {/* Left side: Heading */}
@@ -36,7 +36,7 @@ export default function Home() {
               className="lg:col-span-5 space-y-8"
             >
               <p className="text-lg md:text-xl text-slate-600 leading-relaxed font-sans font-light">
-                MBS has been providing tailor-made insurance and financial products since 1978. 
+                Metropolitan Broking Services has been providing tailor-made insurance and financial products since 1978. 
                 We empower our clients with customized solutions to meet their unique financial objectives.
               </p>
               <div className="flex flex-wrap gap-4 pt-2">
@@ -50,7 +50,7 @@ export default function Home() {
                   to="/contact" 
                   className="border-2 border-mbs-blue text-mbs-blue px-8 py-4 rounded-lg font-bold text-lg hover:bg-mbs-blue/10 transition-all font-sans whitespace-nowrap"
                 >
-                  Get in Touch
+                  Reach Us
                 </Link>
               </div>
             </motion.div>
@@ -59,7 +59,7 @@ export default function Home() {
       </section>
 
       {/* Trust Section */}
-      <section className="py-12 sm:py-24 bg-white">
+      <section className="py-12 sm:py-24 md:max-lg:pt-6 md:max-lg:pb-12 bg-white">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +67,8 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          {/* Main Layout (Mobile and Desktop/Laptop) */}
+          <div className="grid grid-cols-1 md:max-lg:hidden lg:grid-cols-2 gap-16 items-center">
             <div>
               <HeritageCounter />
             </div>
@@ -110,6 +111,54 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Tablet ONLY Layout */}
+          <div className="hidden md:max-lg:flex md:max-lg:flex-col gap-12">
+            <div className="grid grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <motion.h2 
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="text-4xl font-bold text-slate-900 leading-tight"
+                >
+                  Trust Built Over Decades
+                </motion.h2>
+                <p className="text-lg text-slate-600">
+                  With more than 45 years of experience, Metropolitan Broking Services has grown to meet the diverse needs of individuals and corporate clients alike.
+                </p>
+              </div>
+              <div>
+                <HeritageCounter />
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-8 pt-4">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="bg-mbs-grey p-6 rounded-xl border-l-4 border-mbs-yellow"
+              >
+                <ShieldCheck className="w-10 h-10 text-mbs-blue mb-4" />
+                <h3 className="font-bold text-xl mb-2">Licensed & Regulated</h3>
+                <p className="text-sm text-slate-500">Registered under MAS as Licensed Financial Advisor & Exempt Insurance Broker.</p>
+              </motion.div>
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="bg-mbs-grey p-6 rounded-xl border-l-4 border-mbs-yellow"
+              >
+                <TrendingUp className="w-10 h-10 text-mbs-blue mb-4" />
+                <h3 className="font-bold text-xl mb-2">Expert Advice</h3>
+                <p className="text-sm text-slate-500">Led by qualified professionals with 25-30+ years of industry experience.</p>
+              </motion.div>
+            </div>
+          </div>
         </motion.div>
       </section>
 
@@ -127,7 +176,7 @@ export default function Home() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-5xl font-black mb-8 italic uppercase tracking-tight"
+            className="text-3xl md:text-5xl font-black mb-8 uppercase tracking-tight"
           >
             How can we help you today?
           </motion.h2>

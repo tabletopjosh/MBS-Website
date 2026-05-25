@@ -53,7 +53,7 @@ export default function ProductsServices() {
           animate={{ opacity: 1, y: 0 }}
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         >
-          <h1 className="text-4xl md:text-6xl font-black uppercase italic mb-8">Products & Services</h1>
+          <h1 className="text-4xl md:text-6xl font-black uppercase mb-8">Products & Services</h1>
           <p className="text-xl text-blue-100 max-w-4xl font-light leading-relaxed">
             At MBS, we’re all about building great partnerships by looking out for everyone—our clients, staff, and partners. 
             Because we really get what our clients need and have solid ties in the industry, we can handle all your insurance and financial planning in one place.
@@ -110,7 +110,7 @@ export default function ProductsServices() {
                       <section.icon className="w-8 h-8" />
                     </div>
                     <div className="text-left">
-                      <h3 className="text-2xl font-black text-slate-900 uppercase italic leading-none">{section.title}</h3>
+                      <h3 className="text-2xl font-black text-slate-900 uppercase leading-none">{section.title}</h3>
                       <p className="text-slate-500 text-sm mt-2">
                         {filteredServices.filter(s => s.category === section.type).length} professional solutions available
                       </p>
@@ -154,7 +154,7 @@ export default function ProductsServices() {
                              {/* Group by Subcategory */}
                              {Array.from(new Set(filteredServices.filter(s => s.category === section.type && s.subCategory).map(s => s.subCategory))).map((sub) => (
                                <div key={sub} className="space-y-4">
-                                 <h4 className="text-mbs-blue font-black text-sm italic border-l-4 border-mbs-yellow pl-3">{sub}</h4>
+                                 <h4 className="text-mbs-blue font-black text-sm border-l-4 border-mbs-yellow pl-3">{sub}</h4>
                                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                    {filteredServices.filter(s => s.category === section.type && s.subCategory === sub).map((s, i) => (
                                      <motion.div 
@@ -174,7 +174,7 @@ export default function ProductsServices() {
                              {filteredServices.filter(s => s.category === section.type && !s.subCategory).length > 0 && (
                                <div className="space-y-4">
                                  {Array.from(new Set(filteredServices.filter(s => s.category === section.type && s.subCategory))).length > 0 && (
-                                   <h4 className="text-mbs-blue font-black text-sm italic border-l-4 border-mbs-yellow pl-3">General</h4>
+                                   <h4 className="text-mbs-blue font-black text-sm border-l-4 border-mbs-yellow pl-3">General</h4>
                                  )}
                                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                    {filteredServices.filter(s => s.category === section.type && !s.subCategory).map((s, i) => (
@@ -201,7 +201,7 @@ export default function ProductsServices() {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-slate-400 text-sm italic py-8 border-t border-slate-100">
+          <p className="text-slate-400 text-sm py-8 border-t border-slate-100">
             The above is not an exhaustive list. Please <Link to="/contact" className="text-mbs-blue font-bold underline">contact us</Link> for any others not listed above.
           </p>
         </div>

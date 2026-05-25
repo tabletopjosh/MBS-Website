@@ -30,7 +30,7 @@ export default function AboutUs() {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl font-black uppercase italic tracking-wider"
+            className="text-5xl font-black uppercase tracking-wider"
           >
             About MBS
           </motion.h1>
@@ -149,7 +149,7 @@ export default function AboutUs() {
               <div className="absolute top-0 right-0 p-4 opacity-10">
                 <Award className="w-24 h-24" />
               </div>
-              <h3 className="text-2xl font-bold mb-6 italic">The 6Cs of Our Company</h3>
+              <h3 className="text-2xl font-bold mb-6">The 6Cs of Our Company</h3>
               <div className="space-y-4">
                 {values.map((v, i) => (
                   <motion.div 
@@ -191,7 +191,7 @@ export default function AboutUs() {
       <section className="py-24 bg-mbs-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-black text-mbs-blue uppercase italic tracking-tight">Meet the Team</h2>
+            <h2 className="text-4xl font-black text-mbs-blue uppercase tracking-tight">Meet the Team</h2>
             <div className="h-1 w-24 bg-mbs-yellow mx-auto mt-4"></div>
           </div>
           
