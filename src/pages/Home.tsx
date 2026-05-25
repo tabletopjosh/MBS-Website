@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] py-20 flex items-center overflow-hidden bg-slate-50">
+      <section className="relative min-h-[60vh] sm:min-h-[80vh] pt-6 sm:pt-20 pb-6 sm:pb-20 flex items-center overflow-hidden bg-slate-50">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             {/* Left side: Heading */}
@@ -59,7 +59,7 @@ export default function Home() {
       </section>
 
       {/* Trust Section */}
-      <section className="py-24 bg-white">
+      <section className="py-12 sm:py-24 bg-white">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

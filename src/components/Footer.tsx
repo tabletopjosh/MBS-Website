@@ -4,13 +4,13 @@
  */
 
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Printer, Clock } from 'lucide-react';
+import { MapPin, Clock } from 'lucide-react';
 
 export default function Footer() {
   return (
     <footer className="bg-mbs-grey text-slate-800 pt-12 pb-8 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           {/* Info Section */}
           <div className="space-y-4">
             <h3 className="text-lg font-bold text-mbs-blue flex items-center gap-2">
@@ -21,17 +21,6 @@ export default function Footer() {
               #06-24 Katong Shopping Centre<br />
               Singapore 437844
             </p>
-          </div>
-
-          {/* Contact Section */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-bold text-mbs-blue flex items-center gap-2">
-              <Phone className="w-5 h-5" /> Contact
-            </h3>
-            <div className="text-sm space-y-2">
-              <p className="flex items-center gap-2"><Phone className="w-4 h-4 text-slate-500" /> Tel: 63443838 (6 lines)</p>
-              <p className="flex items-center gap-2"><Printer className="w-4 h-4 text-slate-500" /> Fax: 63444546</p>
-            </div>
           </div>
 
           {/* Operating Hours */}
